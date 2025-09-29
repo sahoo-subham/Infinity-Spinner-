@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Infinity Spinner ♾️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            display: inline-block;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .wrapper:hover {
+            transform: scale(1.7) rotate(45deg);
+            filter: drop-shadow(0 0 40px #ff6ec4) drop-shadow(0 0 60px #7873f5) drop-shadow(0 0 90px #4ADEDE);
+        }
+
+        .box {
+            height: 120px;
+            width: 120px;
+            border: 10px solid transparent;
+            border-top: 10px solid #ff6ec4;
+            border-right: 10px solid #7873f5;
+            border-bottom: 10px solid #4ADEDE;
+            border-left: 10px solid #00ff99;
+            border-radius: 50%;
+            animation: search 2s linear infinite;
+        }
+
+        /* Faster spin on hover */
+        .wrapper:hover .box {
+            animation-duration: 0.8s;
+        }
+
+        @keyframes search {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+
+</html>
